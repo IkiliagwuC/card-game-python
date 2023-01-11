@@ -15,7 +15,6 @@ class Card:
     def __str__(self):
         return self.rank + " of " + self.suit
 
-
 class Deck:
     def __init__(self):
         self.all_cards = []
@@ -63,7 +62,6 @@ for x in range(26):
     player_two.add_cards(new_deck.deal_one())
 
 
-
 #while game_on
 game_on = True
 
@@ -83,7 +81,7 @@ while game_on:
         game_on = False
         break
         
-    #start a new round
+    #start a new round/cards on the table to check for War!
     player_one_cards = []
     player_one_cards.append(player_one.remove_one())
     player_two_cards = []
@@ -123,8 +121,7 @@ while game_on:
                 #a can be 5 or 3 depending on how long you want the game to be
                 a = 3
                 for num in range(a):
+                    #drop 3 more cards on the table if no one has less than 3 cards
                     player_one_cards.append(player_one.remove_one())
-                    player_two_cards.append(player_one.remove_one())          
+                    player_two_cards.append(player_two.remove_one())          
 
-
-    
